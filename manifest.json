@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Issue Tracker Plugin",
+  "description": "This extension will record recently visited issues and milestones",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": {                  
+      "19": "images/icon.png"           
+    },
+    "default_title": "Issues",
+    "default_popup": "popup.html"
+  },
+  
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": true
+  },
+
+  "permissions": [
+    "http://github.com/",
+    "https://github.com/",
+    "activeTab",
+    "tabs",
+    "storage"
+   ]
+}
