@@ -37,9 +37,11 @@ function appendIssue(info) {
 // create new tabs for clicked links in popup
 function fixLinks() {
   var links = d.getElementsByTagName('a');
+
   for (var i = 0; i < links.length; i++) {
     var link = links[i];
     var href = link.href;
+    
     link.onclick = function () {
       chrome.tabs.create({active: true, url: href});
     };
